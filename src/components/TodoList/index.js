@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../redux/actions";
 import Todo from "../Todo";
 import { v4 as uuidv4 } from "uuid";
-import { todoListSelector } from '../redux/selector' 
+import { todoRemaining } from '../redux/selector' 
 
 export default function TodoList() {
   const [text, setText] = useState("");
   const [priority, setPriority] = useState("Medium");
 
-  const todoList = useSelector(todoListSelector);
+  const todoList = useSelector(todoRemaining);
 
   const dispatch = useDispatch();
 
