@@ -1,10 +1,10 @@
-import filterSliceReducer from "../Filters/FilterSlice";
-import todoSliceReducer from "../TodoList/TodoSlice";
+import filterSlice from "../Filters/filterSlice";
+import todoSlice from "../TodoList/todoSlice";
 
 const rootReducer = (state = {}, action) => {
   return {
-    filter: filterSliceReducer(state.filter, action),
-    todoList: todoSliceReducer(state.todoList, action)
+    filter: filterSlice(state.filter, action),
+    todoList: todoSlice(state.todoList, action)
   }
 };
 
